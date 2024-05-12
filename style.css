@@ -1,1 +1,49 @@
-body{background-color: lightblue;}
+@font-face {
+    font-family: "Gmarket-Bold";
+    src: url(font/GmarketSansBold.otf) format("opentype");
+}
+@font-face {
+    font-family: "Gmarket-Light";
+    src: url(font/GmarketSansLight.otf) format("opentype");
+}
+@font-face {
+    font-family: "Gmarket-Medium";
+    src: url(font/GmarketSansMedium.otf) format("opentype");
+}
+
+header{
+    font-family: Gmarket-Bold;
+    text-align: center;
+    max-width: 1920px;
+    margin: auto;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    font-family: Gmarket-Light;
+}
+
+body{
+    height: 70%;
+    background-color: lightskyblue;
+}
+
+.container{
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Gmarket-Light;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-family: Gmarket-Medium;
+    margin: 10px 0;
+}

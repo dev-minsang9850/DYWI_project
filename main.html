@@ -3,32 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>weather-mainscreen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>DYWI 덕영 날씨정보 시스템</h1>
-
     </header>
-    <main>
-        <button>
-         <div class="transport">
-            <a href="index.html">'날씨 알리미'로 이동하기</a>
-         </div>
-        </button>
-    </main>
-<div class="container">
-            
-        <div class="content">
-            <div class="weather">
-                <p id = "weather-Info"></p>
-                <p id = "location"></p>
-                <p id = "temperature"></p>
-                <p id = "description"></p>
-            </div>
+
+    <div class="container">
+        <h1>날씨 정보</h1>
+        <div class="weather-Info">
+            <p id="location"></p>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="last-updated"></p>
         </div>
     </div>
+    <script src="script.js"></script>
 
     <footer>
         <p>@2024 기상청 실시간 날씨정보@</p>

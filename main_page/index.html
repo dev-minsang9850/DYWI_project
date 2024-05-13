@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main screen</title>
+    <title>Login_system</title>
 </head>
 <body>
     <header>
         <h1>DY Weather Infomation</h1>
     </header>
-    
 
-    <table>
-        <div class="login-trans-button">
-            <p id="ID"></p>
-            <p id="PW"></p>
-            <button id="Chack"></button>
-        </div>
-    </table>
+    <!--로그인 시스템-->
+    <form method="POST" action="/signup">
+        <label for="username">Username: </label><input type="text" name="username" />
+        <br/>
+        <label for="name">YourName: </label><input type="text" name="name" />
+        <br/>
+        <label for="password">Password: </label><input type="password" name="password" />
+        <br/>
+        <button>Sign Up</button>
+    </form>
 
     <footer>
-        <b>@2024 기상 날씨정보@</b>
+        <b>@2024 Dev_ms : Login system@</b>
     </footer>
 </body>
 </html>

@@ -33,16 +33,16 @@ h1:before{
     margin-right: 10px;
     font-size: 50px;
 }
-
-
-body{
-    height: 70%;
-    background-image: url(skywallpaper.jpg);
-    background-size: cover;
-    width: auto;
-    size: auto;
-    height: auto;
-}
+    
+    
+    body{
+        height: 70%;
+        background-image: url(skywallpaper.jpg);
+        background-size: cover;
+        width: auto;
+        size: auto;
+        height: auto;
+    }
 
 .container{
     max-width: 1000px;
@@ -52,7 +52,7 @@ body{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Gmarket-Light;
+    font-family: Gmarket-Medium;
     border-image: fill;
     font-size: auto;
 }
@@ -63,7 +63,7 @@ body{
 
 p {
     text-align: center;
-    font-family: Gmarket-Medium;
+    font-family: Gmarket-Light;
     margin: 10px 0;
     font-size: larger;
 }
@@ -72,5 +72,5 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
 }

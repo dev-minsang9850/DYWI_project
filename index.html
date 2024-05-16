@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>weather-mainscreen</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" media="screen and (min-width:400px) and (max-width: 1000px)">
     </head>
     <body>
         <header>
-                <h1>DY Weather Infomation</h1>
+            <h1>DYWI</h1>
         </header>
         
         <div class="container">
@@ -18,6 +18,9 @@
                 <p id="temperature"></p>
                 <p id="description"></p>
                 <p id="last-updated"></p>
+            </div>
+            <div class = "button">
+                <button id = "back_button">최신 정보 가져오기</button>
             </div>
         </div>
         <script src="script.js"></script>

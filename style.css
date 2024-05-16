@@ -11,66 +11,74 @@
     src: url(font/GmarketSansMedium.otf) format("opentype");
 }
 
-header{
-    font-family: Gmarket-Bold;
-    color: #fff;
-    text-align: left;
-    max-width: auto;
-    background-color:rgb(32, 32, 32);
-    padding: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    font-weight: 1000px;
-}
 
-h1:before{
-    content: "";
-    display: inline-block;
-    background-image: url("weather-wow.png");
-    background-size: 40px 40px;
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    margin-right: 10px;
-    font-size: 50px;
-}
-    
-    
-    body{
-        height: 70%;
-        background-image: url(skywallpaper.jpg);
-        background-size: cover;
-        width: auto;
-        size: auto;
-        height: auto;
+@media screen and (max-width: 975px) {
+
+    header{
+        font-family: Gmarket-Bold;
+        color: #fff;
+        text-align: left;
+        max-width: auto;
+        background-color:rgb(32, 32, 32);
+        padding: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        font-weight: 1000px;
+        font-size: auto;
     }
-
-.container{
-    max-width: 1000px;
-    margin: 260px auto;
-    color: #fff;
-    background-color: rgb(32, 32, 32);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Gmarket-Medium;
-    border-image: fill;
-    font-size: auto;
-}
-
-.weather-info {
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    font-family: Gmarket-Light;
-    margin: 10px 0;
-    font-size: larger;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1px;
+    
+    h1:before{
+        content: "";
+        display: inline-block;
+        background-image: url("weather-wow.png");
+        background-size: 40px 40px;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        margin-right: 10px;
+        font-size: 50px;
+    }
+        
+        
+        body{
+            height: 70%;
+            background-image: url(skywallpaper.jpg);
+            background-size: cover;
+            width: auto;
+            size: auto;
+            height: auto;
+        }
+    
+    .container{
+        max-width: 1000px;
+        margin: 260px auto;
+        color: #fff;
+        background-color: rgb(32, 32, 32);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: Gmarket-Medium;
+        border-image: fill;
+        font-size: auto;
+    }
+    
+    
+    
+    .weather-info {
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+        font-family: Gmarket-Light;
+        margin: 7.8px 0;
+        font-size: larger;
+    }
+    
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1px;
+    }
+    
 }

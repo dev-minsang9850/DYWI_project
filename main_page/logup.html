@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login_system</title>
+    <title>메인화면</title>
+    <link rel="stylesheet" href="main_style.css">
 </head>
 <body>
     <header>
-        <h1>DY Weather Infomation</h1>
+        <h1>DYWI</h1>
     </header>
 
-    <!--회원가입 시스템-->
-    <form method="POST" action="/signup">
-        <label for="username">Username: </label><input type="text" name="username" />
-        <br/>
-        <label for="name">YourName: </label><input type="text" name="name" />
-        <br/>
-        <label for="password">Password: </label><input type="password" name="password" />
-        <br/>
-        <button>Sign Up</button>
-    </form>
+    <article>
+        <div class="information">
+            <div id = "info">
+                <h2>DYWI이란?</h2>
+                <h3>DukYoung Weather Information의 약자로, 날씨를 알려주는 사이트 입니다.</h3>
+            </div>
+        </div>
+    </article>
+
+    <aside> 
+        <div class = "page_list">
+            <p id="hyperlink-mobile">모바일 페이지로 이동하기</p>
+            <button id = "hyperlink-mobile-button">모바일로 이동</button>
+            <p id="hyperlink-pc">PC 페이지로 이동하기</p>
+            <button id = "hyperlink-pc-button">PC로 이동</button>
+        </div>
+    </aside>
 
     <footer>
-        <b>@2024 Dev_ms : Login system@</b>
+        @2024 개발자 : DEVMS@
     </footer>
 </body>
 </html>

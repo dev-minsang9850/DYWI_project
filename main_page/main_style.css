@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Gmarket-Bold";
+    src: url(font/GmarketSansBold.otf) format("opentype");
+}
+@font-face {
+    font-family: "Gmarket-Light";
+    src: url(font/GmarketSansLight.otf) format("opentype");
+}
+@font-face {
+    font-family: "Gmarket-Medium";
+    src: url(font/GmarketSansMedium.otf) format("opentype");
+}
+
+body{
+    background-color: salmon;
+}
+
+header{
+    font-family: Gmarket-Bold;
+    text-align: center;
+    max-width: auto;
+    background-color: bisque;
+    padding: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    font-weight: auto;
+    font-size: auto;
+}
+
+article{
+    font-family: Gmarket-Medium;
+    text-align: left;
+}
+
+.information{
+    background-color: blanchedalmond;
+}

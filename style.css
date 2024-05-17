@@ -21,17 +21,26 @@ header{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     font-weight: auto;
     font-size: auto;
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    margin-left: 20px;
 }
     
 h1:before{
     content: "";
     display: inline-block;
     background-image: url("weather-wow.png");
-    background-size: 40px 40px;
+    background-size: 40px 33px;
     width: 40px;
-    height: 40px;
+    height: 33px;
     vertical-align: middle;
     margin-right: 10px;
+    margin-left : 10px;
     font-size: 50px;
 }
         
@@ -57,16 +66,20 @@ body{
 }
     
 .container{
-    max-width: 795px;
-    margin: 295px auto;
+    max-width: auto;
+    margin: auto;
     color: #fff;
     background-color: rgb(32, 32, 32);
-    padding: 15px;
+    padding: 55px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Gmarket-Medium;
     border-image: fill;
     font-size: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
     
     
@@ -88,4 +101,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 0.5px;
+    position : absolute;
+    bottom : 0;
+    width: 100%;
 }

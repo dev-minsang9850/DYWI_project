@@ -1,18 +1,12 @@
 @font-face {
-    font-family: "Gmarket-Bold";
-    src: url(font/GmarketSansBold.otf) format("opentype");
-}
-@font-face {
-    font-family: "Gmarket-Light";
-    src: url(font/GmarketSansLight.otf) format("opentype");
-}
-@font-face {
-    font-family: "Gmarket-Medium";
-    src: url(font/GmarketSansMedium.otf) format("opentype");
+    font-family: 'KCC-Hanbit';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 header{
-    font-family: Gmarket-Bold;
+    font-family: KCC-Hanbit;
     color: #fff;
     text-align: left;
     max-width: auto;
@@ -20,7 +14,7 @@ header{
     padding: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     font-weight: auto;
-    font-size: auto;
+    font-size: 170%;
     padding: 15px 0px;
     display: flex;
     align-items: center;
@@ -42,6 +36,10 @@ h1:before{
     margin-right: 10px;
     margin-left : 10px;
     font-size: 50px;
+}
+
+.Info{
+    font-size: 150%;
 }
         
 .background{
@@ -66,16 +64,15 @@ body{
 }
     
 .container{
+    font-family: KCC-Hanbit;
     max-width: auto;
     margin: auto;
     color: #fff;
-    background-color: rgb(32, 32, 32);
-    padding: 30px;
+    background-color: #22223b;
+    padding: 55px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Gmarket-Medium;
     border-image: fill;
-    font-size: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,17 +88,18 @@ body{
     
 p {
     text-align: center;
-    font-family: Gmarket-Light;
     margin: 7.8px 0;
-    font-size: larger;
+    font-size: 120%;
+    background-color: #1a759f;
 }
     
 footer {
-    background: #333;
+    background-color: 1a759f;
     color: #fff;
     text-align: center;
     padding: 0.5px;
-    position : absolute;
+
     bottom : 0;
     width: 100%;
+    font-family: KCC-Hanbit;
 }

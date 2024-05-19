@@ -11,10 +11,6 @@
     src: url(font/GmarketSansMedium.otf) format("opentype");
 }
 
-* {
-    font-size: 105%;
-}
-
 header{
     font-family: Gmarket-Bold;
     color: #fff;
@@ -74,7 +70,7 @@ body{
     margin: auto;
     color: #fff;
     background-color: rgb(32, 32, 32);
-    padding: 55px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Gmarket-Medium;

@@ -17,3 +17,7 @@ function getWeather() {
         })
         .catch(error => console.error('날씨 정보를 가져오는 동안 오류가 발생했습니다.', error));
 }
+
+document.getElementById('back_button').addEventListener('click', function() {
+    location.reload();
+});

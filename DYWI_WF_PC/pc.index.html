@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>weather-mainscreen</title>
+        <link href="style.css" rel="stylesheet" media=""> 
+        <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+    </head>
+    <body>
+        <div class="background"></div>
+        <header>
+            <h1>DYWI</h1>
+        </header>
+        
+        <div class="container">
+            <h2>날씨 정보</h2>
+            <div class="weather-Info">
+                <p id="location"></p>
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <p id="last-updated"></p>
+            </div>
+            <div class = "button">
+                <button id = "back_button">최신 정보 가져오기</button>
+            </div>
+            
+        </div>
+        <script src="script.js"></script>
+        
+        <footer>
+            <p>@2024 실시간 날씨정보@</p>
+        </footer>
+    </body>
+    </html>
+    

@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Gmarket-Bold";
+    src: url(font/GmarketSansBold.otf) format("opentype");
+}
+@font-face {
+    font-family: "Gmarket-Light";
+    src: url(font/GmarketSansLight.otf) format("opentype");
+}
+@font-face {
+    font-family: "Gmarket-Medium";
+    src: url(font/GmarketSansMedium.otf) format("opentype");
+}
+
+body {
+    background-color: #28536B;
+}
+
+header{
+    font-family: Gmarket-Bold;
+    color: #000;
+    text-align: left;
+    max-width: auto;
+    background-color: #f6F0ED;
+    padding: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    font-weight: auto;
+    font-size: auto;
+    padding: 15px 0px;
+    text-align: center;
+    border-radius: 10px 20px 30px 40px;      
+}
+
+article{
+    color: #000;
+    background-color: #BBB193;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Gmarket-Medium;
+    text-align: left;
+}
+
+.Info1{
+    margin-left: 5%;
+}
+
+h4 {
+    background: #7EA8BE;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position : fixed;
+    bottom : 0;
+    width: 100%;
+    font-family: Gmarket-Light;
+    
+}
+
+h5{
+    text-align: center;
+    
+}

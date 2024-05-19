@@ -11,6 +11,11 @@
     src: url(font/GmarketSansMedium.otf) format("opentype");
 }
 
+
+p{
+  font-family: Gmarket-Medium;
+}
+
 :root {
     --clr-one: rgb(255, 20, 147);
     --clr-two: rgb(127, 255, 0);

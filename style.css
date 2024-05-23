@@ -1,284 +1,49 @@
+/* 폰트 스타일 정의 */
 @font-face {
-    font-family: "Gmarket-Bold";
-    src: url(font/GmarketSansBold.otf) format("opentype");
-}
-@font-face {
-    font-family: "Gmarket-Light";
-    src: url(font/GmarketSansLight.otf) format("opentype");
-}
-@font-face {
-    font-family: "Gmarket-Medium";
-    src: url(font/GmarketSansMedium.otf) format("opentype");
+  font-family: 'Taebaek';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/TAEBAEKfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  display: table;
-  background-color: black;
+.container, .h1, .p, .btn1, .btn2, .btn3 {
+  font-family: 'Taebaek', sans-serif;
 }
 
-@font-face {
-  font-family: neon;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-}
-
+/* 전체 컨테이너 스타일 */
 .container {
-  display: table-cell;
   text-align: center;
-  vertical-align: middle;
+  margin-top: 50px;
 }
 
-.neon {
-  font-family: neon;
-  color: #FB4264;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #F40A35;
+/* 제목 스타일 */
+.h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333; /* 원하는 색상으로 변경 가능 */
 }
 
-.flux {
-  font-family: Gmarket-Medium;
-  color: #426DFB;
-  font-size: 20px;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #2356FF;
+/* 문단 스타일 */
+.p {
+  font-size: 18px;
+  color: #666; /* 원하는 색상으로 변경 가능 */
+  margin-bottom: 20px;
 }
 
-.neon {
-  animation: neon 1s ease infinite;
-  -moz-animation: neon 1s ease infinite;
-  -webkit-animation: neon 1s ease infinite;
+/* 버튼 스타일 */
+.btn1, .btn2, .btn3 {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff; /* 텍스트 색상 */
+  background-color: #007bff; /* 배경색상 */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes neon {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
-  }
+/* 버튼 호버 효과 */
+.btn1:hover, .btn2:hover, .btn3:hover {
+  background-color: #0056b3; /* 호버시 변경할 배경색상 */
 }
-
-.flux {
-  animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
-}
-
-@keyframes flux {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
-  }
-}
-
-h1{
-  font-family: Gmarket-Bold;
-  font-size: 60px;
-  text-align: center;
-}
-
-p{
-  font-family: Gmarket-Medium;
-  font-size: 20px;
-  text-align: center;
-}
-
-:root {
-    --clr-one: rgb(255, 20, 147);
-    --clr-two: rgb(127, 255, 0);
-    --clr-three: rgb(138, 43, 226);
-    --clr-bg: #1d1e22;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-  }
-  
-  body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: var(--clr-bg);
-    font-family: "Balsamiq Sans", cursive;
-    overflow: hidden;
-  }
-  
-  h1 {
-    color: white;
-  }
-  
-  p {
-    margin-top: 1em;
-    color: white;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .neon-button {
-    font-size: 1rem;
-  
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    margin: 2rem;
-    border-radius: 0.25em;
-    position: relative;
-  }
-  
-  .neon-button__1 {
-    color: var(--clr-one);
-    border: var(--clr-one) 0.125em solid;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-one;
-    box-shadow: inset 0 0 0.5em 0 var(--clr-one), 0 0 0.5em 0 var(--clr-one);
-  }
-  
-  .neon-button__2 {
-    color: var(--clr-two);
-    border: var(--clr-two) 0.125em solid;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-two;
-    box-shadow: inset 0 0 0.5em 0 var(--clr-two), 0 0 0.5em 0 var(--clr-two);
-  }
-  
-  .neon-button__3 {
-    color: var(--clr-three);
-    border: var(--clr-three) 0.125em solid;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em --clr-three;
-    box-shadow: inset 0 0 0.5em 0 var(--clr-three), 0 0 0.5em 0 var(--clr-three);
-  }
-  
-  .neon-button::before {
-    content: "";
-    position: absolute;
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
-    filter: blur(1.5em);
-    opacity: 0.7;
-    pointer-events: none;
-  }
-  
-  .neon-button.active::before {
-    animation: scalingShadow 0.5s ease-in-out;
-  }
-  
-  @keyframes scalingShadow {
-    0% {
-      top: 120%;
-      transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
-    }
-    50% {
-      top: 165%;
-      transform: perspective(1.5em) rotateX(45deg) scale(0.75, 0.3);
-    }
-    100% {
-      top: 120%;
-      transform: perspective(1.5em) rotateX(45deg) scale(0.8, 0.3);
-    }
-  }
-  
-  .neon-button__1::before {
-    background: var(--clr-one);
-  }
-  
-  .neon-button__2::before {
-    background: var(--clr-two);
-  }
-  
-  .neon-button__3::before {
-    background: var(--clr-three);
-  }
-  
-  .neon-button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 100ms linear;
-  }
-  
-  .neon-button__1::after {
-    box-shadow: 0 0 2em 0.5em var(--clr-one);
-    background-color: var(--clr-one);
-  }
-  
-  .neon-button__2::after {
-    box-shadow: 0 0 2em 0.5em var(--clr-two);
-    background-color: var(--clr-two);
-  }
-  
-  .neon-button__3::after {
-    box-shadow: 0 0 2em 0.5em var(--clr-three);
-    background-color: var(--clr-three);
-  }
-  
-  .neon-button:hover::before,
-  .neon-button:focus::before {
-    opacity: 1;
-  }
-  
-  .neon-button:hover::after,
-  .neon-button:focus::after {
-    opacity: 1;
-  }
-  
-  .neon-button:hover,
-  .neon-button:focus {
-    outline: none;
-    color: var(--clr-bg);
-    text-shadow: none;
-  }
-  
-  .active {
-    animation: animate 0.5s ease-in-out;
-  }
-  
-  @keyframes animate {
-    0% {
-      transform: translateY(0%);
-    }
-    50% {
-      transform: translateY(-40%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  

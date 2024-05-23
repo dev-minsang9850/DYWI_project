@@ -6,36 +6,34 @@
         <title>DYWI_PC</title>
         <link rel="stylesheet" href="/DYWI_WF_PC/pcstyle.css"> 
         <script src="https://cdn.tailwindcss.com"></script>
-
     </head>
-    <body>
-        <div class="background"></div>
-        <header>
-            <h1>DYWI</h1>
-            <div class="img">
-                <button id ="menu" onclick="location.href = '/'">ㅤ</button>
-            </div>
+    <body class="bg-gray-100 text-gray-800">
+        <header class="bg-blue-600 text-white p-4 shadow-md flex items-center justify-between">
+            <h1 class="text-2xl font-bold">DYWI</h1>
+            <button id="menu-btn" onclick="location.href='/'" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                메뉴
+            </button>
         </header>
         
-        <div class="container">
-            <h2 class="Info">날씨 정보</h2>
-            <div class="weather-Info">
-                <p id="location"></p>
-                <p id="temperature"></p>
-                <p id="description"></p>
-                <p id="last-updated"></p>
+        <div class="container mx-auto p-4">
+            <h2 class="text-xl font-semibold mb-4">날씨 정보</h2>
+            <div class="weather-info bg-white p-6 rounded-lg shadow-md mb-4">
+                <p id="location" class="text-lg font-bold ">위치: </p>
+                <p id="temperature" class="text-lg ">온도: </p>
+                <p id="description" class="text-lg mb-2">날씨: </p>
+                <p id="last-updated" class="text-sm">최종 업데이트: </p>
             </div>
-            <div class = "button">
-                <button id = "back_button">최신 정보 가져오기</button>
+            <div class="text-center">
+                <button id="back_button" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                    최신 정보 가져오기
+                </button>
             </div>
-            
-          </div>
-          
-          <footer>
-              <p>@2024 실시간 날씨정보@</p>
-          </footer>
-          
-      <script src="script.js"></script>
+        </div>
+        
+        <footer class="text-white p-4 text-center">
+            <p>&copy; 2024 실시간 날씨정보</p>
+        </footer>
+        
+        <script src="script.js"></script>
     </body>
-    </html>
-    
+</html>

@@ -5,9 +5,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face{
+  font-family:'Dosfont';
+  font-style: normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
 
 .container, .h1, .p, .btn1, .btn2, .btn3 {
-  font-family: 'Taebaek', sans-serif;
+  font-family: 'Dosfont', sans-serif;
 }
 
 /* 전체 컨테이너 스타일 */

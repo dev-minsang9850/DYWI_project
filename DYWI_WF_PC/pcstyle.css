@@ -23,6 +23,10 @@ h1 {
     margin-left: 20px;
 }
 
+h2{
+    color: black;
+}
+
 .img{
     background-image: url("weather-wow.png");
     content: "";
@@ -101,5 +105,5 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-family: KCC-Hanbit;
+    font-family: KCC-Hanbit;  
 }

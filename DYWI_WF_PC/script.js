@@ -41,3 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.getElementById('menu-btn').addEventListener('click', function() {
+    window.location.href = '/'; // 이동할 페이지 URL로 변경하세요
+});

@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DYWI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="h1">DYWI </div>
-        <div class="p">당신이 원하는 빠른 날씨정보를 신속하게 전달하다 </div>
-        <!-- PC 페이지로 이동하는 버튼 -->
-        <a href="DYWI_WF_PC/pc.index.html" class="btn1">PC 페이지</a>
-        <!-- 정보 페이지로 이동하는 버튼 -->
-        <a href="DYWI_WF_IF/IF_index.html" class="btn2">DYWI란?</a>
-        <!-- 모바일 페이지로 이동하는 버튼 -->
-        <a href="DYWI_WF_MB/m.index.html" class="btn3">모바일 페이지</a>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 text-white p-4 shadow-md flex items-center justify-between">
+        <h1 class="text-2xl font-bold" id="clickable-heading">DYWI</h1>
+        <button id="menu_button" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+            메뉴
+        </button>
+    </header>
+
+    <nav id="menu_screen" class="hidden">
+        <button id="close_menu">X</button>
+        <ul>
+            <li><a href="/DYWI_WF_IF/IF_index.html">DYWI란?</a></li>
+            <li><a href="#">연락처</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mx-auto p-4">
+        <h2 class="text-xl font-semibold mb-4">날씨 정보</h2>
+        <div class="weather-info bg-white p-6 rounded-lg shadow-md mb-4">
+            <p id="location" class="text-lg font-bold ">위치: </p>
+            <p id="temperature" class="text-lg ">온도: </p>
+            <p id="description" class="text-lg mb-2">날씨: </p>
+            <p id="last-updated" class="text-lg">최종 업데이트: </p>
+            <p id="clothing-recommendation" class="text-lg font-semibold">추천 옷차림: </p>
+        </div>
+        <div class="chart">
+            <canvas id="weatherChart"></canvas>
+        </div>
+
+        <div class="text-center">
+            <button id="back_button" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                최신 정보 가져오기
+            </button>
+        </div>
     </div>
+    
+    <footer class="bg-blue-600 text-white p-4 text-center">
+        <p>&copy; 2024 실시간 날씨정보</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

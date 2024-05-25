@@ -11,3 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     menuButton.addEventListener('click', toggleMenu);
     closeMenuButton.addEventListener('click', toggleMenu);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.classList.add('fade-in');
+});
+
+document.getElementById('clickable-heading').addEventListener('click', function() {
+    window.location.href = '/index.html';  // 다른 HTML 파일 경로
+});

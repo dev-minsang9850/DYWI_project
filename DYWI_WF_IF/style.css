@@ -1,7 +1,18 @@
 /* style.css */
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'KCC-Hanbit';
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -9,10 +20,28 @@ body {
     color: #333;
     position: relative;
     min-height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+h1:before {
+    content: "";
+    display: inline-block;
+    background-image: url("/weather-wow.png");
+    background-size: 40px 33px;
+    width: 40px;
+    height: 33px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 header {
-    background: #50b3a2;
+    background: #3662E3;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -28,7 +57,7 @@ header h1 {
 
 #menu_button {
     background: #fff;
-    color: #50b3a2;
+    color: #3662E3;
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -76,7 +105,7 @@ nav.hidden {
 
 #close_menu {
     background: #fff;
-    color: #50b3a2;
+    color: #3662E3;
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
@@ -107,7 +136,7 @@ article {
 
 .Info1 h2 {
     font-size: 1.5rem;
-    color: #50b3a2;
+    color: #3662E3;
 }
 
 .Info2 h3 {
@@ -121,7 +150,7 @@ section {
 }
 
 #back_button {
-    background: #50b3a2;
+    background: #3662E3;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;

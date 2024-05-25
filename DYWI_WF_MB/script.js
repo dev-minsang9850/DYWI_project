@@ -24,34 +24,16 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 console.log(data); // 데이터 확인용
 
+                document.getElementById('location').textContent = `위치: ${data.name}`;
                 document.getElementById('temperature').textContent = `온도: ${data.main.temp}°C`;
                 document.getElementById('description').textContent = `날씨: ${data.weather[0].description}`;
 
                 // 현재 시간을 최종 업데이트 시간으로 설정
                 const currentDateTime = new Date();
                 document.getElementById('last-updated').textContent = `최종 업데이트: ${currentDateTime.toLocaleString()}`;
-
-                // 위치 정보를 한글로 변환하여 표시
-                fetchLocationName(lat, lon);
             })
             .catch(error => {
                 console.error('Error fetching weather data:', error);
-            });
-    }
-
-    function fetchLocationName(lat, lon) {
-        const reverseGeocodingUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=kr`;
-
-        fetch(reverseGeocodingUrl)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data); // 데이터 확인용
-                const locationName = data[0] ? data[0].local_names.ko || data[0].name : "알 수 없는 위치";
-                document.getElementById('location').textContent = `위치: ${locationName}`;
-            })
-            .catch(error => {
-                console.error('Error fetching location name:', error);
-                document.getElementById('location').textContent = "위치를 가져오는 중 오류 발생";
             });
     }
 

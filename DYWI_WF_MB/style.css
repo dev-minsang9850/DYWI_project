@@ -135,6 +135,25 @@ nav.hidden {
     display: none;
 }
 
+#close_menu {
+    background: #fff;
+    color: lightskyblue;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: background 0.3s;
+}
+
+#close_menu:hover {
+    background: #f4f4f4;
+}
+
+
 footer {
     background-color: #1a759f;
     color: #fff;

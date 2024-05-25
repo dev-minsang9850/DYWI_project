@@ -1,16 +1,4 @@
-//메뉴버튼 생성 -> menu button added
-document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.getElementById('menu_button');
-    const menuScreen = document.getElementById('menu_screen');
-    const closeMenuButton = document.getElementById('close_menu');
 
-    function toggleMenu() {
-        menuScreen.classList.toggle('hidden');
-    }
-
-    menuButton.addEventListener('click', toggleMenu);
-    closeMenuButton.addEventListener('click', toggleMenu);
-});
 
 //새로운 요소
 document.addEventListener("DOMContentLoaded", function() {
@@ -23,35 +11,17 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.json())
             .then(data => {
                 console.log(data); // 데이터 확인용
-
+                
+                document.getElementById('location').textContent = `위치: ${data.name}`;
                 document.getElementById('temperature').textContent = `온도: ${data.main.temp}°C`;
                 document.getElementById('description').textContent = `날씨: ${data.weather[0].description}`;
 
                 // 현재 시간을 최종 업데이트 시간으로 설정
                 const currentDateTime = new Date();
                 document.getElementById('last-updated').textContent = `최종 업데이트: ${currentDateTime.toLocaleString()}`;
-
-                // 위치 정보를 한글로 변환하여 표시
-                fetchLocationName(lat, lon);
             })
             .catch(error => {
                 console.error('Error fetching weather data:', error);
-            });
-    }
-
-    function fetchLocationName(lat, lon) {
-        const reverseGeocodingUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=kr`;
-
-        fetch(reverseGeocodingUrl)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data); // 데이터 확인용
-                const locationName = data[0] ? data[0].local_names.ko || data[0].name : "알 수 없는 위치";
-                document.getElementById('location').textContent = `위치: ${locationName}`;
-            })
-            .catch(error => {
-                console.error('Error fetching location name:', error);
-                document.getElementById('location').textContent = "위치를 가져오는 중 오류 발생";
             });
     }
 
@@ -76,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     case error.UNKNOWN_ERROR:
                         locationElement.textContent = "알 수 없는 오류가 발생했습니다.";
                         break;
-                }
+                    }
             });
         } else {
             document.getElementById('location').textContent = "이 브라우저는 Geolocation을 지원하지 않습니다.";
@@ -87,4 +57,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 페이지 로드 시 위치 정보를 가져와 날씨 정보 가져오기
     getLocationAndFetchWeather();
+    
+});
+
+//메뉴버튼 생성 -> menu button added
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menu_button');
+    const menuScreen = document.getElementById('menu_screen');
+    const closeMenuButton = document.getElementById('close_menu');
+
+    function toggleMenu() {
+        menuScreen.classList.toggle('hidden');
+    }
+
+    menuButton.addEventListener('click', toggleMenu);
+    closeMenuButton.addEventListener('click', toggleMenu);
 });

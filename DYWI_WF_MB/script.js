@@ -1,23 +1,43 @@
-document.addEventListener('DOMContentLoaded', getWeather);
+document.addEventListener("DOMContentLoaded", function() {
+    const apiKey = 'df333e8c6c05a0c2916457f70b53c04b'; // 여기에 OpenWeatherMap API 키를 입력하세요
+    const city = 'Seoul'; // 원하는 도시 이름을 입력하세요
 
-function getWeather() {
-    const API_KEY = 'df333e8c6c05a0c2916457f70b53c04b'; // 여기에 발급받은 OpenWeatherMap API 키를 입력하세요
-    const API_URL = 'https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=' + API_KEY + '&units=metric'; // 가져올 도시 이름에 따라 수정 가능
+    function fetchWeatherData() {
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=kr`;
 
-    fetch(API_URL)
-        .then(response => response.json())
-        .then(data => {
-            const location = data.name + ', ' + data.sys.country;
-            const temperature = data.main.temp + '℃';
-            const description = data.weather[0].description;
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // 데이터 확인용
 
-            document.getElementById('location').textContent = location;
-            document.getElementById('temperature').textContent = '온도: ' + temperature;
-            document.getElementById('description').textContent = '날씨: ' + description;
-        })
-        .catch(error => console.error('날씨 정보를 가져오는 동안 오류가 발생했습니다.', error));
-}
+                document.getElementById('location').textContent = `위치: ${data.name}`;
+                document.getElementById('temperature').textContent = `온도: ${data.main.temp}°C`;
+                document.getElementById('description').textContent = `날씨: ${data.weather[0].description}`;
 
-document.getElementById('back_button').addEventListener('click', function() {
-    location.reload();
+                // 현재 시간을 최종 업데이트 시간으로 설정
+                const currentDateTime = new Date();
+                document.getElementById('last-updated').textContent = `최종 업데이트: ${currentDateTime.toLocaleString()}`;
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
+    }
+
+    document.getElementById('back_button').addEventListener('click', fetchWeatherData);
+
+    // 페이지 로드 시 날씨 정보 가져오기
+    fetchWeatherData();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menu_button');
+    const menuScreen = document.getElementById('menu_screen');
+    const closeMenuButton = document.getElementById('close_menu');
+
+    function toggleMenu() {
+        menuScreen.classList.toggle('hidden');
+    }
+
+    menuButton.addEventListener('click', toggleMenu);
+    closeMenuButton.addEventListener('click', toggleMenu);
 });

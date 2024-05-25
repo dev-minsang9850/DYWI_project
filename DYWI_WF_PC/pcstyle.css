@@ -153,6 +153,20 @@ nav.hidden {
     background: #f4f4f4;
 }
 
+#clothing-recommendation {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#clothing-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 footer {
     background-color: #1a759f;

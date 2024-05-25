@@ -20,10 +20,72 @@ document.addEventListener("DOMContentLoaded", function() {
                 // 현재 시간을 최종 업데이트 시간으로 설정
                 const currentDateTime = new Date();
                 document.getElementById('last-updated').textContent = `최종 업데이트: ${currentDateTime.toLocaleString()}`;
+
+                // 옷 추천 기능 추가
+                const clothingRecommendation = getClothingRecommendation(data.main.temp, data.weather[0].main);
+                document.getElementById('clothing-recommendation').textContent = `추천 옷차림: ${clothingRecommendation}`;
+                const clothingImageSrc = getClothingImage(data.main.temp, data.weather[0].main);
+                document.getElementById('clothing-image').src = clothingImageSrc;
             })
             .catch(error => {
                 console.error('Error fetching weather data:', error);
             });
+    }
+
+    function getClothingRecommendation(temp, weather) {
+        if (weather === 'Rain') {
+            if (temp > 20) {
+                return "가벼운 우비, 방수 신발";
+            } else {
+                return "따뜻한 옷, 방수 코트, 방수 부츠";
+            }
+        } else if (weather === 'Clear') {
+            if (temp > 25) {
+                return "반팔, 반바지, 선글라스";
+            } else if (temp > 15) {
+                return "긴팔, 가벼운 자켓";
+            } else {
+                return "따뜻한 외투, 레이어드 옷";
+            }
+        } else if (weather === 'Snow') {
+            return "두꺼운 외투, 장갑, 목도리, 부츠";
+        } else {
+            if (temp > 25) {
+                return "가벼운 옷";
+            } else if (temp > 15) {
+                return "편안한 옷";
+            } else {
+                return "따뜻한 레이어드 옷, 코트";
+            }
+        }
+    }
+
+    function getClothingImage(temp, weather) {
+        if (weather === 'Rain') {
+            if (temp > 20) {
+                return "images/light_rain_gear.png";
+            } else {
+                return "images/warm_rain_gear.png";
+            }
+        } else if (weather === 'Clear') {
+            if (temp > 25) {
+                return "images/summer_clothes.png";
+            } else if (temp > 15) {
+                return "images/spring_clothes.png";
+            } else {
+                return "images/winter_clothes.png";
+            }
+        } else if (weather === 'Snow') {
+            return "images/winter_clothes.png";
+        } else {
+            if (temp > 25) {
+                return "images/light_clothes.png";
+            } else if (temp > 15) {
+                return "images/comfortable_clothes.png";
+            } else {
+                return "images/winter_clothes.png";
+            }
+        }
     }
 
     function translateLocationName(locationName) {

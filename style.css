@@ -81,6 +81,9 @@ body {
     overflow: hidden;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body.fade-in {
@@ -91,10 +94,10 @@ body.fade-in {
 .container {
     font-family: KCC-Hanbit;
     margin: auto;
-    color: #fff;
     padding: 10vh;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 8.5%;
     position: relative;
     
 }
@@ -110,12 +113,13 @@ p {
     text-align: center;
     margin: 7.8px 0;
     font-size: 150%;
-    background-color: #1a759f;
+    background-color: #3662E3;
+    color: #ffffff;
 }
 
 
 #menu_button:hover {
-    background: #f4f4f4;
+    background: #6183e9;
 }
 
 nav {
@@ -130,6 +134,7 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    
 }
 
 nav ul {
@@ -152,8 +157,8 @@ nav.hidden {
 }
 
 #close_menu {
-    background: #fff;
-    color: lightskyblue;
+    background: #3662E3;
+    color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
@@ -166,7 +171,7 @@ nav.hidden {
 }
 
 #close_menu:hover {
-    background: #f4f4f4;
+    background: #94adff;
 }
 
 #clothing-recommendation {
@@ -182,6 +187,23 @@ nav.hidden {
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 footer {

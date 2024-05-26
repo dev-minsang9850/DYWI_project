@@ -8,24 +8,16 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.json())
             .then(data => {
                 console.log(data); // 데이터 확인용
-
-                // 도시 이름을 한국어로 표시
                 const locationName = data.name; // API에서 반환된 도시 이름
                 const koreanLocationName = translateLocationName(locationName); // 한국어로 변환된 도시 이름
 
                 document.getElementById('location').textContent = `위치: ${koreanLocationName}`;
                 document.getElementById('temperature').textContent = `온도: ${data.main.temp}°C`;
                 document.getElementById('description').textContent = `날씨: ${data.weather[0].description}`;
-
-                // 현재 시간을 최종 업데이트 시간으로 설정
                 const currentDateTime = new Date();
                 document.getElementById('last-updated').textContent = `최종 업데이트: ${formatDateToKorean(currentDateTime)}`;
-
-                // 옷 추천 기능 추가
                 const clothingRecommendation = getClothingRecommendation(data.main.temp, data.weather[0].main);
                 document.getElementById('clothing-recommendation').textContent = `추천 옷차림: ${clothingRecommendation}`;
-                const clothingImageSrc = getClothingImage(data.main.temp, data.weather[0].main);
-                document.getElementById('clothing-image').src = clothingImageSrc;
             })
             .catch(error => {
                 console.error('Error fetching weather data:', error);
@@ -70,36 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    function getClothingImage(temp, weather) {
-        if (weather === 'Rain') {
-            if (temp > 20) {
-                return "images/light_rain_gear.png";
-            } else {
-                return "images/warm_rain_gear.png";
-            }
-        } else if (weather === 'Clear') {
-            if (temp > 25) {
-                return "images/summer_clothes.png";
-            } else if (temp > 15) {
-                return "images/spring_clothes.png";
-            } else {
-                return "images/winter_clothes.png";
-            }
-        } else if (weather === 'Snow') {
-            return "images/winter_clothes.png";
-        } else {
-            if (temp > 25) {
-                return "images/light_clothes.png";
-            } else if (temp > 15) {
-                return "images/comfortable_clothes.png";
-            } else {
-                return "images/winter_clothes.png";
-            }
-        }
-    }
-
     function translateLocationName(locationName) {
-        // 도시 이름을 한국어로 변환하는 함수
         const locationMapping = {
             "Seoul": "서울특별시",
             "Busan": "부산광역시",
@@ -157,10 +120,9 @@ document.addEventListener("DOMContentLoaded", function() {
             "Pyeongchang": "평창군",
             "Jeju": "제주시",
             "Seogwipo": "서귀포시"
-            // 필요에 따라 더 많은 매핑 추가
         };
 
-        return locationMapping[locationName] || locationName; // 매핑된 이름이 없으면 원래 이름 반환
+        return locationMapping[locationName] || locationName;
     }
 
     function getLocationAndFetchWeather() {
@@ -200,13 +162,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // 요소가 존재하는지 확인한 후 이벤트 리스너 추가
     const backButton = document.getElementById('back_button');
     if (backButton) {
         backButton.addEventListener('click', getLocationAndFetchWeather);
     }
 
-    // 페이지 로드 시 위치 정보를 가져와 날씨 정보 가져오기
     getLocationAndFetchWeather();
 
     const menuButton = document.getElementById('menu_button');
@@ -230,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     document.body.classList.add('fade-in');
+    document.body.style.backgroundImage = "url('path/to/your-default-background.jpg')"; // 기본 배경 이미지 설정
 });
 
 document.getElementById('clickable-heading').addEventListener('click', function() {

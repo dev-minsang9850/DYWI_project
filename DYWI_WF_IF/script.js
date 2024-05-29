@@ -19,3 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('clickable-heading').addEventListener('click', function() {
     window.location.href = '/index.html';  // 다른 HTML 파일 경로
 });
+
+function showContact() {
+    const contactInfo = "전화번호: 010-4106-9850\n이메일: Devms2048@gmail.com";
+    alert(contactInfo);
+}

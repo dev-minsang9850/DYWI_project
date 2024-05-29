@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"> 
     <script src="https://cdn.tailwindcss.com" defer></script>
 </head>
-<body class="background bg-gray-100 text-gray-800" >
+<body>
     <header class="bg-blue-600 text-white p-4 shadow-md flex items-center justify-between">
         <h1 class="text-2xl font-bold" id="clickable-heading">DYWI</h1>
         <button id="menu_button" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
@@ -19,7 +19,7 @@
         <button id="close_menu">X</button>
         <ul>
             <li><a href="/DYWI_WF_IF/IF_index.html">DYWI란?</a></li>
-            <li><a href="#">연락처</a></li>
+            <li><a href="#" onclick="showContact()">연락처</a></li>
         </ul>
     </nav>
     
@@ -32,14 +32,15 @@
             <p id="last-updated" class="text-lg">최종 업데이트: </p>
             <p id="clothing-recommendation" class="text-lg font-semibold">추천 옷차림: </p>
         </div>
-        <div class="chart">
-            <canvas id="weatherChart"></canvas>
-        </div>
-
+        
         <div class="text-center">
             <button id="back_button" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
                 최신 정보 가져오기
             </button>
+        </div>
+        
+        <div class="chart">
+            <canvas id="weatherChart"></canvas>
         </div>
     </div>
     

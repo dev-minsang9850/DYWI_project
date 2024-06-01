@@ -6,6 +6,9 @@
     <title>DYWI</title>
     <link rel="stylesheet" href="style.css"> 
     <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+
 </head>
 <body>
     <header class="bg-blue-600 text-white p-4 shadow-md flex items-center justify-between">
@@ -49,5 +52,18 @@
     </footer>
     
     <script src="script.js"></script>
+      <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+              console.log('Service Worker registered with scope:', registration.scope);
+            }, function(err) {
+              console.log('Service Worker registration failed:', err);
+            });
+          });
+        }
+      </script>
+      
+      
 </body>
 </html>

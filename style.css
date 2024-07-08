@@ -94,11 +94,12 @@ body.fade-in {
 .container {
     font-family: KCC-Hanbit;
     margin: auto;
-    padding: 10vh;
+    padding: 3%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
-    
+    width: 55%;
+    height: 65%;
 }
 
 .weather-info {
@@ -112,7 +113,7 @@ p {
     text-align: center;
     margin: 7.8px 0;
     font-size: 150%;
-    background-color: #3662E3;
+    background-color: #253985;
     color: #ffffff;
 }
 
@@ -156,7 +157,7 @@ nav.hidden {
 }
 
 #close_menu {
-    background: #3662E3;
+    background: #253985;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -166,7 +167,7 @@ nav.hidden {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
 #close_menu:hover {

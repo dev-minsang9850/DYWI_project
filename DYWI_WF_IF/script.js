@@ -21,6 +21,6 @@ document.getElementById('clickable-heading').addEventListener('click', function(
 });
 
 function showContact() {
-    const contactInfo = "전화번호: 010-4106-9850\n이메일: Devms2048@gmail.com";
+    const contactInfo = "전화번호: 010-4106-9850\n이메일: devms2048@whitespider.kr";
     alert(contactInfo);
 }

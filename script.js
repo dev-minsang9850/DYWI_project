@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function translateLocationName(locationName) {
         const locationMapping = {
             "Seoul": "서울특별시",
+            "SeSeongnam-si":"성남시",
             "Busan": "부산광역시",
             "Incheon": "인천광역시",
             "Daegu": "대구광역시",

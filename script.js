@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const apiKey = 'df333e8c6c05a0c2916457f70b53c04b'; // 여기에 OpenWeatherMap API 키를 입력하세요
+    const apiKey = '69ae4763d3950ab9dec05fff8ba80dd5'; // 여기에 OpenWeatherMap API 키를 입력하세요
 
     function fetchWeatherData(lat, lon) {
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=kr`;
